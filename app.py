@@ -17,5 +17,14 @@ if st.button("Submit"):
     st.write(f"Result: {result}")
     df = pd.DataFrame(data={"result": [result]})
     df.to_csv('result.csv')
+    import requests
+
+    # SharePoint file url
+    url = "https://verisure.sharepoint.com/:x:/r/sites/TTT-TeamBI-DataScience/Shared%20Documents/Data%20Science/Babyfoot.xlsx?d=w5a777f721ea3457fa6003297fd45b665&csf=1&web=1&e=nLixfh"
+    # Download the file to memory
+    response = requests.get(url)
+    content = response.content
+
+    print(content)
 
 
