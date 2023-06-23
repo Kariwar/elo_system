@@ -27,6 +27,6 @@ if st.button("Submit"):
     response = requests.get(url)
     content = response.content
 
-    print(content)
+    st.write(content)
 
 
