@@ -13,3 +13,6 @@ result = st.selectbox("Winners are ?",
 if st.button("Submit"):
     st.write(f"{member_1_t1} et {member_2_t1} vs {member_1_t2} et {member_2_t2}")
     st.write(f"Result: {result}")
+
+with open('result.txt', 'w') as f:
+    f.write(result)
